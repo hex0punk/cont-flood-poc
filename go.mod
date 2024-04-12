@@ -4,7 +4,7 @@ go 1.21.1
 
 require (
 	github.com/shirou/gopsutil v3.21.11+incompatible
-	golang.org/x/net v0.20.0
+	golang.org/x/net v0.23.0
 	google.golang.org/grpc v1.59.0
 	google.golang.org/protobuf v1.33.0
 )

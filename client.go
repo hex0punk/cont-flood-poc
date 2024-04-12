@@ -161,7 +161,7 @@ func (hc *http2Client) wantSettings() (*http2.SettingsFrame, error) {
 }
 
 func init() {
-	flag.IntVar(&timeLimit, "time limit", 120, "Number of seconds to limit continuation frame requests")
+	flag.IntVar(&timeLimit, "time-limit", 120, "Number of seconds to limit continuation frame requests")
 	flag.StringVar(&urlStr, "url", "https://localhost:8443", "Server URL")
 	flag.IntVar(&waitTime, "wait", 0, "Wait time in milliseconds between starting workers")
 	flag.IntVar(&numConns, "connections", 1, "Number of concurrent connections")
