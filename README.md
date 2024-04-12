@@ -7,6 +7,11 @@ This code borrows some inspiration from:
 1. The PoC code for the rapid reset vulnerability from https://github.com/secengjeff/rapidresetclient
 2. Test code added after the vulnerability was patched by the Go team, located in [golang/net/http2/server_test.go](https://github.com/golang/net/blob/ba872109ef2dc8f1da778651bd1fd3792d0e4587/http2/server_test.go#L4790)
 
+my initial goal was to understand the vulnerability in detail, in addition to developing a tool for testing this issue at work. Other sources that were helpful include:
+
+- Daniel Stenberg's [http2 book](https://daniel.haxx.se/http2/)
+- [rfc 7540](https://www.rfc-editor.org/rfc/rfc7540)
+
 ## Testing with the included server
 
 You can run the included `server.go` file which runs on a vulnerable version of golang.org/x/net (0.20.0). 
