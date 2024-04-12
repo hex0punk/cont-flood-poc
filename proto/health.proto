@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option go_package = "github.com/hex0punk/cont-flood-poc/proto/healthpb;healthpb";
+
+package health;
+
+// The gRPC service definition for Health checks.
+service HealthService {
+  rpc Check(HealthCheckRequest) returns (HealthCheckResponse);
+}
+
+// Request message for a health check. Currently, it does not need to contain any fields.
+message HealthCheckRequest {}
+
+// Response message containing the health metrics.
+message HealthCheckResponse {
+  float cpu_usage_percent = 1;
+  float memory_usage_percent = 2;
+}
