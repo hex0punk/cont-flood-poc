@@ -1,15 +1,15 @@
 # PoC for CVE-2023-45288
 
-This is a proof-of-concept code for the CONTINUATION flood vulnerability found and documented by Bartek Nowotarski. The technical details are very well documented in his blog post [here](https://nowotarski.info/http2-continuation-flood-technical-details/).
+This is a proof-of-concept code for the CONTINUATION flood vulnerability found and documented by Bartek Nowotarski. The technical details are very well documented in his blog post [here](https://nowotarski.info/http2-continuation-flood-technical-details/). While my focus was on the Go bug as documented by the researcher, this code should be helpful in testing other CVEs related to this issue, such as [CVE-2024-27983](https://ubuntu.com/security/CVE-2024-27983).
 
 This code borrows some inspiration from:
 
 1. The PoC code for the rapid reset vulnerability from https://github.com/secengjeff/rapidresetclient
 2. Test code added after the vulnerability was patched by the Go team, located in [golang/net/http2/server_test.go](https://github.com/golang/net/blob/ba872109ef2dc8f1da778651bd1fd3792d0e4587/http2/server_test.go#L4790)
 
-My initial goal was to understand the vulnerability in detail, in addition to developing a tool for testing this issue at work. Other sources that were helpful include:
+My initial goal was to understand the vulnerability in detail, in addition to developing a tool for testing this issue at work. This was also very helpful when working on understanding the inner workings of http2 in detail. Other sources that were helpful include:
 
-- Daniel Stenberg's [http2 book](https://daniel.haxx.se/http2/)
+- Daniel Stenberg's [http2 explained](https://daniel.haxx.se/http2/) book
 - [rfc 7540](https://www.rfc-editor.org/rfc/rfc7540)
 
 ## Testing with the included server
