@@ -1,6 +1,6 @@
 # PoC for CVE-2023-45288
 
-This is a proof-of-concept code for the CONTINUATION flood vulnerability found and documented by Bartek Nowotarski. The technical details are very well documented in his blog post [here](https://nowotarski.info/http2-continuation-flood-technical-details/). While my focus was on the Go bug as documented by the researcher, this code should be helpful in testing other CVEs related to this issue, such as [CVE-2024-27983](https://ubuntu.com/security/CVE-2024-27983).
+This is a proof-of-concept code for the CONTINUATION flood vulnerability found and documented by Bartek Nowotarski. The technical details are very well documented in his blog post [here](https://nowotarski.info/http2-continuation-flood-technical-details/). While my focus was on the Go bug as documented by the researcher, this code should be helpful in testing other CVEs related to this issue.
 
 This code borrows some inspiration from:
 
