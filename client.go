@@ -248,7 +248,8 @@ func testContinuationFlood(doneChan chan struct{}, wg *sync.WaitGroup) {
 				case *http2.HeadersFrame:
 					fmt.Printf("received HEADERS frame: %v\n", frame)
 				case *http2.GoAwayFrame:
-					fmt.Printf("received GOAWAY frame: %v\n", frame)
+					fmt.Printf("received GOAWAY frame: %v. Server is likely not vulnerable\n", frame)
+					return
 				default:
 					fmt.Printf("received frame: %v\n", frame)
 				}
